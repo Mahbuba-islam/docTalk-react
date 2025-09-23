@@ -12,6 +12,7 @@ import Contact from './Components/Contact/Contact.jsx';
 import MyBookings from './Components/MyBookings/MyBookings.jsx';
 import AllDoctors from './Components/AllDoctors/AllDoctors.jsx';
 import Doctors from './Components/Doctors/Doctors.jsx';
+import Details from './Components/Details/Details.jsx';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
     {
       path:'/allDoctors',
       element:<AllDoctors></AllDoctors>,
+      loader: ()=> fetch('/data.json')
+    },
+    {
+      path:'/details/:id',
+      element:<Details></Details>,
       loader: ()=> fetch('/data.json')
     }
       

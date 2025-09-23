@@ -7,7 +7,10 @@
     "reg_no": "NY123456",
     "experience": 15,
     "availability": "Mon-Fri, 9am-5pm",
-    "status": "available"
+    "status": "available",
+     "consultation_fee": 120,
+    "working_at": "New York General Hospital"
+
   },
   {
     "id": 2,
@@ -17,7 +20,10 @@
     "reg_no": "TX987654",
     "experience": 10,
     "availability": "Tue-Sat, 10am-4pm",
-    "status": "not available"
+    "status": "not available",
+    "consultation_fee": 150,
+    "working_at": "Texas Heart Institute"
+
   },
   {
     "id": 3,
@@ -27,7 +33,10 @@
     "reg_no": "CA456789",
     "experience": 8,
     "availability": "Mon-Wed, 8am-2pm",
-    "status": "available"
+    "status": "available",
+     "consultation_fee": 100,
+    "working_at": "California Children's Hospital"
+
   },
   {
     "id": 4,
@@ -37,7 +46,10 @@
     "reg_no": "FL321654",
     "experience": 12,
     "availability": "Mon-Fri, 11am-6pm",
-    "status": "available"
+    "status": "available",
+     "consultation_fee": 130,
+    "working_at": "Florida Skin & Laser Clinic"
+
   },
   {
     "id": 5,
@@ -47,7 +59,9 @@
     "reg_no": "IL789321",
     "experience": 20,
     "availability": "Mon, Wed, Fri, 9am-3pm",
-    "status": "not available"
+    "status": "not available",
+     "consultation_fee": 130,
+    "working_at": "Florida Skin & Laser Clinic"
   },
   {
     "id": 6,
@@ -57,7 +71,10 @@
     "reg_no": "WA654987",
     "experience": 9,
     "availability": "Tue-Thu, 10am-5pm",
-    "status": "available"
+    "status": "available",
+     "consultation_fee": 180,
+    "working_at": "Illinois Neuro Center"
+
   },
   {
     "id": 7,
@@ -67,7 +84,10 @@
     "reg_no": "NJ852963",
     "experience": 14,
     "availability": "Mon-Sat, 9am-1pm",
-    "status": "available"
+    "status": "available",
+     "consultation_fee": 180,
+    "working_at": "Illinois Neuro Center"
+
   },
   {
     "id": 8,
@@ -77,7 +97,10 @@
     "reg_no": "OH147258",
     "experience": 11,
     "availability": "Mon-Fri, 8am-4pm",
-    "status": "not available"
+    "status": "not available",
+     "consultation_fee": 180,
+    "working_at": "Illinois Neuro Center"
+
   },
   {
     "id": 9,
@@ -87,7 +110,10 @@
     "reg_no": "MA369852",
     "experience": 7,
     "availability": "Tue-Fri, 12pm-6pm",
-    "status": "available"
+    "status": "available",
+     "consultation_fee": 160,
+    "working_at": "New Jersey Women's Health Center"
+
   },
   {
     "id": 10,
@@ -97,7 +123,10 @@
     "reg_no": "GA951753",
     "experience": 13,
     "availability": "Mon-Thu, 10am-3pm",
-    "status": "available"
+    "status": "available",
+    "consultation_fee": 170,
+    "working_at": "Ohio Bone & Joint Hospital"
+
   },
   {
     "id": 11,
@@ -107,7 +136,10 @@
     "reg_no": "CO753159",
     "experience": 6,
     "availability": "Wed-Sat, 9am-2pm",
-    "status": "not available"
+    "status": "not available",
+    "consultation_fee": 170,
+    "working_at": "Ohio Bone & Joint Hospital"
+
   },
   {
     "id": 12,
@@ -117,6 +149,9 @@
     "reg_no": "PA258456",
     "experience": 17,
     "availability": "Mon-Fri, 10am-5pm",
-    "status": "available"
+    "status": "available",
+    "consultation_fee": 170,
+    "working_at": "Ohio Bone & Joint Hospital"
+
   }
 ]

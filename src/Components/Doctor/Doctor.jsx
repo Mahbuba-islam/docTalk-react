@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 
 const Doctor = ({doctor}) => {
-    const {name,img,qualification,experience,reg_no,status} = doctor
+    const {name,img,qualification,experience,reg_no,status,id} = doctor
     return (
         <div className="container mx-auto">
            
@@ -21,7 +22,7 @@ const Doctor = ({doctor}) => {
     <p className="text-left">{qualification}</p>
     <hr className="border border-dashed border-gray-400"/>
      <p className="flex items-center gap-2 font-semibold text-gray-600"> <div className="w-5 h-5 rounded-full border border-gray-400 flex justify-center items-center text-gray-600 text-xs">R</div> Reg-No: {reg_no}</p>
-    <button className="btn btn-primary mt-3">View Details</button>
+    <Link to={`/details/${id}`}><button className="btn btn-primary mt-3">View Details</button></Link>
   </div>
 </div>
          
