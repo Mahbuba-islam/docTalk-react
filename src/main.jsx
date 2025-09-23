@@ -10,12 +10,18 @@ import Home from './Components/Home/Home.jsx';
 import Blogs from './Components/Blogs/Blogs.jsx';
 import Contact from './Components/Contact/Contact.jsx';
 import MyBookings from './Components/MyBookings/MyBookings.jsx';
+import AllDoctors from './Components/AllDoctors/AllDoctors.jsx';
+import Doctors from './Components/Doctors/Doctors.jsx';
 
 const router = createBrowserRouter([
   {
     path:'/',
     element:<Home></Home>,
      children: [
+      {
+        path:'/',
+        element:<Doctors></Doctors>
+      },
       {
         path: '/blogs',
         element: <Blogs />
@@ -27,6 +33,11 @@ const router = createBrowserRouter([
     {
       path:'/mybookings',
       element:<MyBookings></MyBookings>
+    },
+    {
+      path:'/allDoctors',
+      element:<AllDoctors></AllDoctors>,
+      loader: ()=> fetch('/data.json')
     }
       
     ]

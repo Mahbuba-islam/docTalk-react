@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Doctor from "../Doctor/Doctor";
+import { Link } from "react-router-dom";
 
 
 const Doctors = () => {
@@ -11,14 +12,22 @@ const Doctors = () => {
     .then(res => res.json())
     .then(data => setDoctors(data))
     },[])
+  
+    const slicedDoctors = doctors.slice(0,6)
+    console.log(slicedDoctors)
+  
 
+    
     return (
-        <div>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 ">
+        <div className="container mx-auto text-center">
+            <div className="max-w-6xl grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 container mx-auto gap-8">
                 {
-                    doctors.map(doctor => <Doctor key={doctor.id} doctor={doctor}></Doctor>)
+                    slicedDoctors.map(doctor => <Doctor key={doctor.id} doctor={doctor}></Doctor>)
                 }
             </div>
+           
+           <Link to='/allDoctors'><button className="btn btn-primary my-12 w-lg">See More</button> </Link> 
+        
         </div>
     );
 };
