@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Details = () => {
     const data = useLoaderData()
-    const [isAvailable, setIsAvailable] = useState('')
+    const [isAvailable, setIsAvailable] = useState(false)
     console.log(data)
     const {id} = useParams()
     console.log(id)
@@ -13,7 +14,7 @@ const Details = () => {
     const {name,img,qualification,reg_no,availability,consultation_fee,working_at} = doctorDetails
 
 
-    // availablibity
+    // cheack availablibity
     useEffect(()=> {
      const today = new Date()
      const dayNumber = today.getDay()
@@ -25,14 +26,23 @@ const Details = () => {
     console.log(todayName)
     console.log(av.includes(todayName))
     if(av.includes(todayName)){
-      setIsAvailable('Doctor is Available Today')
+      setIsAvailable(true)
+      
     }
-    else{
-      setIsAvailable('Doctor is not available Today')
-    }
+    
+ 
     },[])
      
-    
+  
+    // const handleAppointment = () => {
+    //  if(isAvailable){
+      
+    //  }
+    //  else{
+    //   toast.error('doctor is not available today')
+    //  }
+
+    // }
     return (
         <div className="container mx-auto max-w-5xl">
             <div className="card md:card-side bg-base-100 shadow-sm rounded-2xl">
@@ -68,12 +78,12 @@ const Details = () => {
     <hr className="border border-dashed border-gray-400"/>
     <div className="flex justify-between items-center my-2">
     <p className="text-left font-bold text-lg">Availability</p>
-    <button className="bg-[#cfefda] text-[#09982F] font-semibold rounded-full py-2 px-4">{isAvailable}</button>
+    <button className="bg-[#cfefda] text-[#09982F] font-semibold rounded-full py-2 px-4">{isAvailable ? 'Doctor is Available Today' : 'Doctor is not available Today'}</button>
     </div>
     
      <hr className="border border-dashed border-gray-400"/>
     <div className="justify-end card-actions mx-auto mt-2">
-      <button className="btn btn-primary">Book Appointment Now</button>
+      <button disabled={!isAvailable} onClick={handleAppointment} className="btn btn-primary">Book Appointment Now</button>
     </div>
   </div>
 </div>
