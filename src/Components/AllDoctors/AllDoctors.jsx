@@ -12,7 +12,7 @@ const AllDoctors = () => {
                     data.map(doctor => <Doctor key={doctor.id} doctor={doctor}></Doctor>)
                 }
             </div>
-             <Link to='/'><button className="btn btn-primary my-12 w-lg">See Less</button> </Link> 
+             <Link to='/'><button className="btn btn-primary my-12 rounded-full px-12">See Less</button> </Link> 
         </div>
     );
 };

@@ -8,11 +8,11 @@ import linkdln from '../../assets/linkedin-icon-logo-png-transparent.png'
 
 const Footer = () => {
     return (
-        <div className="container mx-auto space-y-8">
+        <div className=" space-y-8 bg-white py-12">
             <div className="flex flex-col justify-center items-center">
-             <a className="btn btn-ghost md:text-xl text-sm font-bold mx-auto "> <img className="w-6 md:w-8" src={logo} alt="" />DocBridge</a>
+             <a className="btn btn-ghost md:text-xl text-sm font-bold mx-auto"> <img className="w-6 md:w-8" src={logo} alt="" />DocBridge</a>
                <div className="navbar-center  lg:flex">
-    <ul className="menu menu-horizontal px-1">
+    <ul className="menu menu-horizontal text-xs">
       <li><NavLink to='/'>Home</NavLink></li>
        <li><NavLink to='mybookings'>My-Bookings</NavLink></li>
        <li><NavLink to='blogs'>Blogs</NavLink></li>
@@ -20,7 +20,7 @@ const Footer = () => {
     </ul>
     
   </div>
-  <hr className="w-full mt-4"/>
+  <hr className="w-1/2 mt-4"/>
   {/* contact */}
  
   <div className=" flex items-center gap-4 mt-8">

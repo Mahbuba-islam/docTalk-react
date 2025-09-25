@@ -1,18 +1,22 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
+import { getAppointment, saveLocalStorage } from "../utility/utility";
 
 const Details = () => {
     const data = useLoaderData()
     const [isAvailable, setIsAvailable] = useState(false)
+   
     console.log(data)
     const {id} = useParams()
     console.log(id)
     const idNumber = parseInt(id)
    const doctorDetails = data.find(doctor => doctor.id === idNumber)
-    // console.log(doctorDetails)
-    const {name,img,qualification,reg_no,availability,consultation_fee,working_at} = doctorDetails
+   const {name,img,qualification,reg_no,availability,consultation_fee,working_at} = doctorDetails
 
+    // navigate
+    const navigate = useNavigate()
+    // appointment
 
     // cheack availablibity
     useEffect(()=> {
@@ -33,16 +37,25 @@ const Details = () => {
  
     },[])
      
-  
-    // const handleAppointment = () => {
-    //  if(isAvailable){
-      
-    //  }
-    //  else{
-    //   toast.error('doctor is not available today')
-    //  }
+    //  handleAppointment
+    const handleAppointment = (id) => {
+     const appointmentfromLs = getAppointment()
+     if(appointmentfromLs.includes(id)){
+      toast.error('you have already booked this appoinment')
+     }
+    else{
+     
+      toast.success('you have successefully booked appointment')
+      setTimeout(()=> {
+      navigate('/mybookings')
+      }, 4000)
+     
+    }
+     saveLocalStorage(id)
 
-    // }
+    }
+
+
     return (
         <div className="container mx-auto max-w-5xl">
             <div className="card md:card-side bg-base-100 shadow-sm rounded-2xl">
@@ -83,7 +96,7 @@ const Details = () => {
     
      <hr className="border border-dashed border-gray-400"/>
     <div className="justify-end card-actions mx-auto mt-2">
-      <button disabled={!isAvailable} onClick={handleAppointment} className="btn btn-primary">Book Appointment Now</button>
+      <button disabled={!isAvailable} onClick={()=> handleAppointment(id)} className="btn btn-primary">Book Appointment Now</button>
     </div>
   </div>
 </div>

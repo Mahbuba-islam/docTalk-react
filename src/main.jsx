@@ -33,7 +33,8 @@ const router = createBrowserRouter([
     },
     {
       path:'/mybookings',
-      element:<MyBookings></MyBookings>
+      element:<MyBookings></MyBookings>,
+      loader:()=> fetch('/data.json')
     },
     {
       path:'/allDoctors',
