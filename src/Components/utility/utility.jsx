@@ -1,4 +1,3 @@
-import { toast } from "react-toastify"
 
 const getAppointment = () => {
     const appointment = localStorage.getItem('appointment')
@@ -23,4 +22,13 @@ const saveLocalStorage = (id) => {
   localStorage.setItem('appointment', JSON.stringify(appointment))
 }
 
-export{saveLocalStorage, getAppointment}
+const deleteAppointmentFromLS = (id) => {
+  console.log(id)
+  const appointments = getAppointment()
+  console.log(appointments)
+  const left = appointments.filter(appointmentId => parseInt(appointmentId) !== id)
+  console.log(left)
+  localStorage.setItem('appointment',JSON.stringify(left))
+}
+
+export{saveLocalStorage, getAppointment,deleteAppointmentFromLS }

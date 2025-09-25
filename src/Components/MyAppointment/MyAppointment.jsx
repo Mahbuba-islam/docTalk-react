@@ -1,6 +1,7 @@
+ 
 
-const MyAppointment = ({appointment}) => {
-    const {name,qualification,consultation_fee} = appointment
+const MyAppointment = ({appointment,handleCancelAppointment}) => {
+    const {id,name,qualification,consultation_fee} = appointment
     return (
         <div>
               <div className="card bg-base-100 card-xs shadow-sm rounded-2xl p-2 mx-2">
@@ -13,7 +14,7 @@ const MyAppointment = ({appointment}) => {
     
      <hr className="border border-dashed border-gray-400 mt-2"/>
     <div className="justify-end card-actions mx-auto mt-2">
-      <button className="btn border-2 border-red-700 rounded-full lg:px-30 my-2 md:px-20 px-10">cancel Appointment </button>
+      <button onClick={()=>handleCancelAppointment(id)} className="btn border-2 border-red-700 rounded-full lg:px-30 my-2 md:px-20 px-10">cancel Appointment </button>
     </div>
   </div>
 </div>

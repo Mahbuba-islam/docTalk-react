@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "What is the output of typeof null?",
+    "answer": "'object'",
+    "explanation": "Due to a legacy bug in JavaScript, typeof null returns 'object'."
+  },
+  {
+    "id": 2,
+    "question": "Which keyword is used to declare a constant in JavaScript?",
+    "answer": "const",
+    "explanation": "The const keyword creates a variable that cannot be reassigned."
+  },
+  {
+    "id": 3,
+    "question": "What does NaN stand for in JavaScript?",
+    "answer": "Not a Number",
+    "explanation": "NaN is a special value representing an invalid number result."
+  },
+  {
+    "id": 4,
+    "question": "Which method converts a JSON string into a JavaScript object?",
+    "answer": "JSON.parse()",
+    "explanation": "JSON.parse() takes a JSON-formatted string and returns a JavaScript object."
+  },
+  {
+    "id": 5,
+    "question": "What is the result of 2 + '2' in JavaScript?",
+    "answer": "'22'",
+    "explanation": "JavaScript coerces the number into a string, resulting in string concatenation."
+  }
+]

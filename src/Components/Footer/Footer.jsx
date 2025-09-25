@@ -24,10 +24,10 @@ const Footer = () => {
   {/* contact */}
  
   <div className=" flex items-center gap-4 mt-8">
-   <Link to='https://www.facebook.com/mahbuba.islam.167372'><img className="md:w-12 w-8" src={facebook} alt="" /></Link>
-   <Link to='https://www.linkedin.com/in/mahbuba-akter-020157211/'><img className="md:w-12 w-8" src={linkdln} alt="" /></Link>
-   <Link to='https://www.instagram.com/'><img className="md:w-18 w-12" src={insta} alt="" /></Link>
-    <Link to='https://www.youtube.com/@MahbubaIslam-NY'><img className="md:w-12 w-8" src={youtube} alt="" /></Link>
+   <Link to='https://www.facebook.com/mahbuba.islam.167372'><img className="w-8" src={facebook} alt="" /></Link>
+   <Link to='https://www.linkedin.com/in/mahbuba-akter-020157211/'><img className="w-8" src={linkdln} alt="" /></Link>
+   <Link to='https://www.instagram.com/'><img className=" w-12" src={insta} alt="" /></Link>
+    <Link to='https://www.youtube.com/@MahbubaIslam-NY'><img className=" w-8" src={youtube} alt="" /></Link>
   </div>
             </div>
            
