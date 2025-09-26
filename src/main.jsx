@@ -13,6 +13,7 @@ import MyBookings from './Components/MyBookings/MyBookings.jsx';
 import AllDoctors from './Components/AllDoctors/AllDoctors.jsx';
 import Doctors from './Components/Doctors/Doctors.jsx';
 import Details from './Components/Details/Details.jsx';
+import NotFound from './Components/NotFound/NotFound.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,8 @@ const router = createBrowserRouter([
      children: [
       {
         path:'/',
-        element:<Doctors></Doctors>
+        element:<Doctors></Doctors>,
+       
       },
       {
         path: '/blogs',
@@ -46,7 +48,13 @@ const router = createBrowserRouter([
       path:'/details/:id',
       element:<Details></Details>,
       loader: ()=> fetch('/data.json')
+    },
+    {
+      path:'*',
+      element:<NotFound></NotFound>
+     
     }
+   
       
     ]
 

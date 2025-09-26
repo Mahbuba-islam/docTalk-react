@@ -40,17 +40,14 @@ const Details = () => {
     //  handleAppointment
     const handleAppointment = (id) => {
      const appointmentfromLs = getAppointment()
-     if(appointmentfromLs.includes(id)){
-      toast.error('you have already booked this appoinment')
-     }
-    else{
-     
-      toast.success('you have successefully booked appointment')
-      setTimeout(()=> {
-      navigate('/mybookings')
-      }, 4000)
-     
-    }
+    if (appointmentfromLs.includes(id)) {
+  toast.error("You've already booked this appointment. Check your bookings for details.");
+} else {
+  toast.success("Appointment booked successfully! Redirecting to your bookings...");
+  setTimeout(() => {
+    navigate("/mybookings");
+  }, 4000);
+}
      saveLocalStorage(id)
 
     }

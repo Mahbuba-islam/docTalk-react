@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Doctor from "../Doctor/Doctor";
 import { Link } from "react-router-dom";
+import BestService from "../BestService/BestService";
 
 
 const Doctors = () => {
@@ -27,7 +28,7 @@ const Doctors = () => {
             </div>
            
            <Link to='/allDoctors'><button className="btn btn-primary my-12 px-12 rounded-full">See More</button> </Link> 
-        
+          <BestService></BestService>
         </div>
     );
 };
