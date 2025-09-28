@@ -18,8 +18,7 @@ const saveLocalStorage = (id) => {
 
   }
   
-  
-  localStorage.setItem('appointment', JSON.stringify(appointment))
+   localStorage.setItem('appointment', JSON.stringify(appointment))
 }
 
 const deleteAppointmentFromLS = (id) => {

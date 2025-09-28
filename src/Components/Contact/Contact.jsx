@@ -3,11 +3,13 @@ import facebook from '../../assets/facebook-logo-2019.png'
 import youtube from '../../assets/youtube-2-logo-png-transparent.png'
 import insta from '../../assets/instagram-icon-white-on-black-circle.png'
 import linkdln from '../../assets/linkedin-icon-logo-png-transparent.png'
+import { Helmet } from "react-helmet-async";
 
 
 const Contact = () => {
     return (
         <div className="max-w-xl mx-auto my-20 ">
+          <Helmet><title>Contact</title></Helmet>
     <div className="card bg-base-100 shadow-md border border-base-300">
       <div className="card-body">
         <h2 className="card-title text-indigo-600 text-xl">

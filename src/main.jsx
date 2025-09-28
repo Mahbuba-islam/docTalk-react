@@ -14,12 +14,14 @@ import AllDoctors from './Components/AllDoctors/AllDoctors.jsx';
 import Doctors from './Components/Doctors/Doctors.jsx';
 import Details from './Components/Details/Details.jsx';
 import NotFound from './Components/NotFound/NotFound.jsx';
+import { HelmetProvider } from 'react-helmet-async';
+
 
 const router = createBrowserRouter([
   {
     path:'/',
     element:<Home></Home>,
-     children: [
+    children: [
       {
         path:'/',
         element:<Doctors></Doctors>,
@@ -66,7 +68,11 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <HelmetProvider>
     <RouterProvider router={router}/>
     <ToastContainer />
-  </StrictMode>,
+    </HelmetProvider>
+    </StrictMode>,
+  
+ 
 )

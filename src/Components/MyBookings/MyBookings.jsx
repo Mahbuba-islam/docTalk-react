@@ -4,6 +4,7 @@ import { deleteAppointmentFromLS, getAppointment } from "../utility/utility";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { BarChart, Bar, XAxis, YAxis } from 'recharts';
+import { Helmet } from "react-helmet-async";
 
 const MyBookings = () => {
 
@@ -54,11 +55,9 @@ const renderCustomAxisTick = ({ x, y, payload }) => {
   );
 };
 
-
-
-
-    return (
+ return (
         <div className="flex flex-col justify-center items-center">
+          <Helmet><title>My Bookings</title></Helmet>
             <BarChart width={600} height={300} data={appoinments}>
   <XAxis dataKey="name" tick={renderCustomAxisTick} />
   <YAxis />

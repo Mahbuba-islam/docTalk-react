@@ -1,12 +1,32 @@
-# React + Vite
+🩺 Doctalk
+Doctalk is a responsive frontend web app that displays doctor profiles with filtering, search, 
+and routing features. Built with React, React Router, Tailwind CSS, and DaisyUI, it’s designed
+ to be beginner-friendly and culturally inclusive.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ 🚀 Live Demo
+🔗 View Doctalk on Surge
 
-Currently, two official plugins are available:
+📦 Tech Stack
+- React (v19)
+- React Router DOM
+- Tailwind CSS
+- DaisyUI
+- Mock API Data (JSON)
+- Surge (for deployment)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✨ Features
+- 🧑‍⚕️ Doctor profile cards with real names, fees, workplaces, and images
+- 🗂️ show details via route params and query strings
+- 📄 Dynamic routing with loaders
+- 🎨 Responsive design using Tailwind and DaisyUI
+- 🧠 Helmet integration for dynamic page titles (with fallback logic)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🌐 Deployment
+npm run build
+npx surge dist your-surge-link.surge.sh
+
+🙌 Credits
+Created by Mahbuba — frontend developer.
+
+

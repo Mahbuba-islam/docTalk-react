@@ -2,11 +2,15 @@ import { useEffect, useState } from "react";
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { getAppointment, saveLocalStorage } from "../utility/utility";
+ import { Helmet } from "react-helmet";
 
 const Details = () => {
     const data = useLoaderData()
     const [isAvailable, setIsAvailable] = useState(false)
-   
+    const [isLoading, setLoading] = useState(true)
+
+
+
     console.log(data)
     const {id} = useParams()
     console.log(id)
@@ -32,8 +36,7 @@ const Details = () => {
     if(av.includes(todayName)){
       setIsAvailable(true)
       
-    }
-    
+    } 
  
     },[])
      
@@ -55,7 +58,12 @@ const Details = () => {
 
     return (
         <div className="container mx-auto max-w-5xl">
-            <div className="card md:card-side bg-base-100 shadow-sm rounded-2xl">
+         <Helmet>
+        <title>{name || "Doctor Details | Loading..."}</title>
+      </Helmet>
+
+
+        <div className="card md:card-side bg-base-100 shadow-sm rounded-2xl">
   <figure className="w-[335px] p-4">
     <img className="w-full rounded-4xl p-2 "
       src={img}
@@ -97,8 +105,7 @@ const Details = () => {
     </div>
   </div>
 </div>
-
-        </div>
+</div>
     );
 };
 

@@ -1,5 +1,4 @@
  
-
 const MyAppointment = ({appointment,handleCancelAppointment}) => {
     const {id,name,qualification,consultation_fee} = appointment
     return (
