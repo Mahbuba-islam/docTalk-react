@@ -8,7 +8,7 @@
     "experience": 15,
     "availability": [
     {
-      "day": "wednesday",
+      "day": "sunday",
       "time": "9am-5pm"
     },
     {
@@ -36,7 +36,7 @@
     "experience": 10,
      "availability": [
     {
-      "day": "wed",
+      "day": "sunday",
       "time": "9am-5pm"
     },
     {
@@ -143,7 +143,7 @@
       "time": "9am-5pm"
     },
     {
-      "day": "Friday",
+      "day": "sunday",
       "time": "9am-5pm"
     },
     {
@@ -165,7 +165,7 @@
     "experience": 14,
      "availability": [
     {
-      "day": "thursDay",
+      "day": "sunday",
       "time": "9am-5pm"
     },
     {
@@ -199,7 +199,7 @@
       "time": "9am-5pm"
     },
     {
-      "day": "saturday",
+      "day": "sunday",
       "time": "9am-5pm"
     }
   ],

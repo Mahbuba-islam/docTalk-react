@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useNavigate, useParams } from "react-router-dom";
+import { Link, useLoaderData, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { getAppointment, saveLocalStorage } from "../utility/utility";
  import { Helmet } from "react-helmet";
@@ -105,6 +105,10 @@ const Details = () => {
     </div>
   </div>
 </div>
+<div className="flex justify-center">
+ <Link to='/'><button className="btn btn-primary my-8 ">See Another Doctor</button></Link>
+</div>
+
 </div>
     );
 };

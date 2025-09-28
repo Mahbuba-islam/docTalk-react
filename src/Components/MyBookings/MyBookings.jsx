@@ -58,11 +58,13 @@ const renderCustomAxisTick = ({ x, y, payload }) => {
  return (
         <div className="flex flex-col justify-center items-center">
           <Helmet><title>My Bookings</title></Helmet>
-            <BarChart width={600} height={300} data={appoinments}>
+           {
+            appoinments.length ? <BarChart width={600} height={300} data={appoinments}>
   <XAxis dataKey="name" tick={renderCustomAxisTick} />
   <YAxis />
   <Bar dataKey="consultation_fee" fill="#3366d8" shape={<TriangleBar />} />
-</BarChart>
+</BarChart> : ''
+           } 
 
              <h2 className="font-bold text-5xl text-center my-12">
                 {
